@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>BitWiseBrain</title>
+    <link rel="stylesheet" href="styles-login-signup.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Computer Science Quiz">
+    <meta name="keywords" content="Computer, Science, Quiz, Computer Science, Computer Science Quiz">
+    <meta name="author" content="Shreyas Kadam, Shubham Kamble, Vivek Kamble">
+</head>
+<body>
+    <div class="hamburger-menu">
+        <ion-icon name="menu-outline" id="menu-toggle"></ion-icon>
+    </div>
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h2 class="sidebar-title">
+                <button class="sidebar-toggle">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </button>
+                <span>BitWiseBrain</span>
+            </h2>
+        </div>
+        <nav class="vertical-nav">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <button class="nav-link sidebar-btn active" onclick="window.location.href='./index.html'">
+                        <ion-icon name="home-outline"></ion-icon>
+                        <span>Home Page</span>
+                    </button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link sidebar-btn" onclick="location.href='#courses'">
+                        <ion-icon name="book-outline"></ion-icon>
+                        <span>Courses</span>
+                    </button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link sidebar-btn" onclick="location.href='#quizzes'">
+                        <ion-icon name="help-circle-outline"></ion-icon>
+                        <span>Quizzes</span>
+                    </button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link sidebar-btn" onclick="window.location.href='./assets/html/playground.html'">
+                        <ion-icon name="code-slash-outline"></ion-icon>
+                        <span>Playground</span>
+                    </button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link sidebar-btn" onclick="location.href='#settings'">
+                        <ion-icon name="settings-outline"></ion-icon>
+                        <span>Settings</span>
+                    </button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link sidebar-btn" onclick="window.location.href='./assets/html/reels.html'">
+                        <ion-icon name="film-outline"></ion-icon>
+                        <span>Reels</span>
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="main">
+        <div class="navbar">
+            <div class="icon">
+                <h2 class="logo">BitWiseBrain</h2>
+            </div>
+            
+            <div class="menu">
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#">SERVICE</a></li>
+                    <li><a href="#">DESIGN</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                </ul>
+            </div>
+
+        </div> 
+        <div class="content">
+            <h1>An Adaptive,<br><span>Reel-based</span> <br>Learning Platform</h1>
+            <p class="par">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt neque 
+                 expedita atque eveniet <br> quis nesciunt. Quos nulla vero consequuntur, fugit nemo ad delectus 
+                <br> a quae totam ipsa illum minus laudantium?</p>
+
+                <button class="cn"><a href="#">JOIN US</a></button>
+
+                <div class="login-form form">
+                    <h2>Login Page</h2>
+                    <input type="email" name="email" placeholder="Enter Email" > <!--required-->
+                    <input type="password" name="" placeholder="Enter Password" > <!--required-->
+                    <a href="./assets/html/main.html"><button class="btnn">Login</button></a>
+
+                    <p class="link">Don't have an account<br>
+                    <a href="./assets/html/signup.html">Sign up </a> here</a></p>
+                    <p class="liw">Log in with</p>
+
+                    <div class="icons">
+                        <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+                        <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+                        <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+                        <a href="#"><ion-icon name="logo-google"></ion-icon></a>
+                        <a href="#"><ion-icon name="logo-skype"></ion-icon></a>
+                    </div>
+
+                </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const sidebar = document.querySelector('.sidebar');
+            const sidebarItems = document.querySelectorAll('.nav-link, .sidebar-btn');
+            
+            // Set initial state
+            sidebar.classList.add('closed');
+            
+            // Add click event listener to all sidebar items
+            sidebarItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    // Remove active class from all items
+                    sidebarItems.forEach(i => i.classList.remove('active'));
+                    // Add active class to clicked item
+                    this.classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reels - BitWiseBrain</title>
+    <link rel="stylesheet" href="../../styles-login-signup.css">
+    <link rel="stylesheet" href="../css/reel.css">
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h2 class="sidebar-title">
+                <button class="sidebar-toggle">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </button>
+                <span>BitWiseBrain</span>
+            </h2>
+        </div>
+        <nav class="vertical-nav">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <button class="nav-link sidebar-btn" onclick="window.location.href='../../index.html'">
+                        <ion-icon name="home-outline"></ion-icon>
+                        <span>Home Page</span>
+                    </button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link sidebar-btn" onclick="location.href='#courses'">
+                        <ion-icon name="book-outline"></ion-icon>
+                        <span>Courses</span>
+                    </button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link sidebar-btn" onclick="location.href='#quizzes'">
+                        <ion-icon name="help-circle-outline"></ion-icon>
+                        <span>Quizzes</span>
+                    </button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link sidebar-btn" onclick="window.location.href='playground.html'">
+                        <ion-icon name="code-slash-outline"></ion-icon>
+                        <span>Playground</span>
+                    </button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link sidebar-btn" onclick="location.href='#settings'">
+                        <ion-icon name="settings-outline"></ion-icon>
+                        <span>Settings</span>
+                    </button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link sidebar-btn active">
+                        <ion-icon name="film-outline"></ion-icon>
+                        <span>Reels</span>
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="reels-container" id="reelsContainer">
+        <!-- Videos will be added here dynamically -->
+    </div>
+
+    <!-- Hidden file input for selecting videos -->
+    <input type="file" id="videoInput" accept="video/*" style="display: none;" multiple>
+
+    <!-- Floating Plus Button -->
+    <button class="add-button" id="addVideo">+</button>
+
+    <script>
+        // Add sidebar functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const sidebar = document.querySelector('.sidebar');
+            const sidebarItems = document.querySelectorAll('.nav-link, .sidebar-btn');
+            
+            // Set initial state
+            sidebar.classList.add('closed');
+            
+            // Add click event listener to all sidebar items
+            sidebarItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    // Remove active class from all items
+                    sidebarItems.forEach(i => i.classList.remove('active'));
+                    // Add active class to clicked item
+                    this.classList.add('active');
+                });
+            });
+        });
+    </script>
+    <script src="../js/reel.js"></script>
+</body>
+</html> 

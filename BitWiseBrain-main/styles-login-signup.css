@@ -1,0 +1,685 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.main{
+    width: 100%;
+    background-image: url(./assets/img/login-signup-BG.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 120vh;
+}
+
+.navbar{
+    width: 1200px;
+    height: 75px;
+    margin: auto;
+}
+
+.icon{
+    width: 200px;
+    float: left;
+    height: 70px;
+}
+
+/* .logo{
+    color: #1ec8ff;
+    font-size: 35px;
+    font-family: Arial;
+    padding-left: 20px;
+    float: left;
+    padding-top: 10px;
+    margin-top: 5px
+} */
+
+.logo {
+    color: white; /* Brighter color to contrast with the dark areas of the image */
+    font-size: 35px;
+    font-family: Arial;
+    padding-left: 20px;
+    float: left;
+    padding-top: 10px;
+    margin-top: 5px;
+    
+    /* Text shadow for better visibility */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    
+    /* Optional: Semi-transparent background */
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.menu{
+    width: 400px;
+    float: left;
+    height: 70px;
+}
+
+ul{
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul li{
+    list-style: none;
+    margin-left: 62px;
+    margin-top: 27px;
+    font-size: 14px;
+}
+
+ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-family: Arial;
+    font-weight: bold;
+    transition: 0.4s ease-in-out;
+}
+
+ul li a:hover{
+    color: #1ec8ff;
+}
+
+.search{
+    width: 330px;
+    float: left;
+    margin-left: 270px;
+}
+
+.srch{
+    font-family: 'Times New Roman';
+    width: 200px;
+    height: 40px;
+    background: transparent;
+    border: 1px solid #1ec8ff;
+    margin-top: 13px;
+    color: #fff;
+    border-right: none;
+    font-size: 16px;
+    float: left;
+    padding: 10px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.btn{
+    width: 100px;
+    height: 40px;
+    background: #1ec8ff;
+    border: 2px solid #1ec8ff;
+    margin-top: 13px;
+    color: #fff;
+    font-size: 15px;
+    border-bottom-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+.btn:hover{
+    color: #000;
+}
+
+.btn:focus{
+    outline: none;
+}
+
+.srch:focus{
+    outline: none;
+}
+
+.content{
+    width: 1200px;
+    height: auto;
+    margin: auto;
+    color: #fff;
+    position: relative;
+}
+
+.content .par{
+    padding-left: 20px;
+    padding-bottom: 25px;
+    font-family: Arial;
+    letter-spacing: 1.2px;
+    line-height: 30px;
+}
+
+.content h1{
+    font-family: 'Times New Roman';
+    font-size: 50px;
+    padding-left: 20px;
+    margin-top: 9%;
+    letter-spacing: 2px;
+}
+
+.content .cn{
+    width: 160px;
+    height: 40px;
+    background: #1ec8ff;
+    border: none;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .4s ease;
+    
+}
+
+.content .cn a{
+    text-decoration: none;
+    color: #000;
+    transition: .3s ease;
+}
+
+.cn:hover{
+    background-color: #fff;
+}
+
+.content span{
+    color: #1ec8ff;
+    font-size: 65px
+}
+
+.form{
+    /* Needs changes for signup page's box */
+    width: 250px;
+    height: 380px;
+    background: linear-gradient(to top, rgba(0,0,0,0.8)50%,rgba(0,0,0,0.8)50%);
+    position: absolute;
+    top: -20px;
+    left: 870px;
+    transform: translate(0%,-5%);
+    border-radius: 10px;
+    padding: 25px;
+}
+
+.login-page {
+    height: 380px;
+}
+
+.signup-form {
+    height: 450px;
+}
+
+.form h2{
+    width: 220px;
+    font-family: sans-serif;
+    text-align: center;
+    color: #1ec8ff;
+    font-size: 22px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 2px;
+    padding: 8px;
+}
+
+.form input{
+    width: 240px;
+    height: 35px;
+    background: transparent;
+    border-bottom: 1px solid #1ec8ff;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    color: #fff;
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin-top: 30px;
+    font-family: sans-serif;
+}
+
+.form input:focus{
+    outline: none;
+}
+
+::placeholder{
+    color: #fff;
+    font-family: Arial;
+}
+
+.btnn{
+    width: 240px;
+    height: 40px;
+    background: #1ec8ff;
+    border: none;
+    margin-top: 30px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #fff;
+    transition: 0.4s ease;
+}
+.btnn:hover{
+    background: #fff;
+    color: #1ec8ff;
+}
+.btnn a{
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+.form .link{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    padding-top: 20px;
+    text-align: center;
+}
+.form .link a{
+    text-decoration: none;
+    color: #1ec8ff;
+}
+.liw{
+    padding-top: 15px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+.icons a{
+    text-decoration: none;
+    color: #fff;
+}
+.icons ion-icon{
+    color: #fff;
+    font-size: 30px;
+    padding-left: 14px;
+    padding-top: 5px;
+    transition: 0.3s ease;
+}
+.icons ion-icon:hover{
+    color: #1ec8ff;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 80px;
+    background-color: #1b1b1b;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    padding-top: 70px;
+    transition: all 0.3s ease;
+    overflow-x: hidden;
+}
+
+/* Sidebar Header Styles */
+.sidebar-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    background-color: #1b1b1b;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Hamburger Button Styles */
+.sidebar-toggle {
+    width: 35px;
+    height: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 10px;
+}
+
+.sidebar-toggle .line {
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    transition: all 0.3s ease;
+    border-radius: 3px;
+}
+
+/* Title Styles */
+.sidebar-title {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: #1ec8ff;
+    font-size: 20px;
+    white-space: nowrap;
+}
+
+.sidebar-title span {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Hover States */
+.sidebar:hover {
+    width: 250px;
+}
+
+.sidebar:hover .sidebar-title span {
+    opacity: 1;
+}
+
+.sidebar:hover .sidebar-toggle .line {
+    background-color: #1ec8ff;
+}
+
+/* Remove other hover-related styles that might interfere */
+.sidebar.closed .sidebar-toggle {
+    display: flex;
+}
+
+.sidebar.closed .sidebar-title span {
+    display: none;
+}
+
+/* Auto-expand on hover */
+.sidebar:hover .nav-link span,
+.sidebar:hover .sidebar-btn span,
+.sidebar:hover .sidebar-title span {
+    opacity: 1;
+    visibility: visible;
+    display: inline-block;
+}
+
+/* Adjust alignment on hover */
+.sidebar:hover .nav-link,
+.sidebar:hover .sidebar-btn {
+    justify-content: flex-start;
+    padding-left: 20px;
+}
+
+/* Change hamburger color on hover */
+.sidebar:hover .sidebar-toggle .line {
+    background-color: #1ec8ff;
+}
+
+/* Remove click-based toggle functionality from JavaScript */
+
+/* Navigation Items */
+.nav-link span,
+.sidebar-btn span {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    margin-left: 15px;
+}
+
+.sidebar:not(.closed) .nav-link span,
+.sidebar:not(.closed) .sidebar-btn span {
+    opacity: 1;
+    display: inline-block;
+}
+
+/* Center icons when closed */
+.sidebar.closed .nav-link,
+.sidebar.closed .sidebar-btn {
+    justify-content: center;
+}
+
+/* Align items to left when open */
+.sidebar:not(.closed) .nav-link,
+.sidebar:not(.closed) .sidebar-btn {
+    justify-content: flex-start;
+    padding-left: 20px;
+}
+
+/* Main content adjustment */
+.main {
+    margin-left: 80px;
+    width: calc(100% - 80px);
+    transition: all 0.3s ease;
+}
+
+.main.full-width {
+    margin-left: 80px;  /* Keep space for hamburger */
+    width: calc(100% - 80px);
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .sidebar.closed {
+        transform: translateX(-80px);
+    }
+    
+    .sidebar:not(.closed) {
+        width: 250px;
+        transform: translateX(0);
+    }
+    
+    .main {
+        margin-left: 0;
+        width: 100%;
+    }
+    
+    .hamburger-menu {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .sidebar.closed {
+        transform: translateX(-250px);
+    }
+}
+
+/* Hamburger Menu Styles */
+.hamburger-menu {
+    display: none;
+}
+
+/* Updated Sidebar Button Styles */
+.sidebar-btn {
+    width: 100%;
+    border: none;
+    background: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    padding: 15px 25px;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.sidebar-btn:hover {
+    background-color: #2d2d2d;
+    color: #1ec8ff;
+}
+
+.sidebar-btn ion-icon {
+    margin-right: 10px;
+    font-size: 1.2em;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    padding: 15px 25px;
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: #2d2d2d;
+    color: #1ec8ff;
+}
+
+.nav-link.active {
+    color: #1ec8ff;
+    background-color: #2d2d2d;
+}
+
+.nav-link span {
+    margin-left: 10px;
+}
+
+/* Active state for buttons */
+.sidebar-btn.active {
+    background-color: #2d2d2d;
+    color: #1ec8ff;
+}
+
+.sidebar-btn.active ion-icon {
+    color: #1ec8ff;
+}
+
+/* Ensure proper spacing between items */
+.nav-item {
+    margin: 5px 0;
+}
+
+/* Navigation Container Styles */
+.vertical-nav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.nav.flex-column {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+/* Navigation Item Styles */
+.nav-item {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start; /* Align to left */
+    margin: 5px 0;
+}
+
+/* Default state (closed sidebar) */
+.nav-link, 
+.sidebar-btn {
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align to left */
+    padding: 15px 20px;
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+/* Icon Styles */
+.nav-link ion-icon,
+.sidebar-btn ion-icon {
+    font-size: 1.5em;
+    min-width: 30px;
+    margin-right: 0;
+}
+
+/* Keep icons left-aligned when closed */
+.sidebar.closed .nav-link,
+.sidebar.closed .sidebar-btn {
+    padding-left: 25px; /* Add padding on the left */
+    justify-content: flex-start;
+}
+
+/* Expanded sidebar styles */
+.sidebar:hover .nav-link,
+.sidebar:hover .sidebar-btn {
+    width: 100%;
+    justify-content: flex-start;
+    padding-left: 20px;
+}
+
+.sidebar:hover .nav-link ion-icon,
+.sidebar:hover .sidebar-btn ion-icon {
+    margin-right: 15px;
+}
+
+/* Text Span Styles */
+.nav-link span,
+.sidebar-btn span {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    margin-left: 15px;
+    white-space: nowrap;
+}
+
+/* Hover and Active States */
+.nav-link:hover,
+.sidebar-btn:hover,
+.nav-link.active {
+    background-color: #2d2d2d;
+    color: #1ec8ff;
+}
+
+/* Show text on sidebar hover */
+.sidebar:hover .nav-link span,
+.sidebar:hover .sidebar-btn span {
+    opacity: 1;
+}
+
+/* Center icons when sidebar is closed */
+.sidebar.closed .nav-link,
+.sidebar.closed .sidebar-btn {
+    justify-content: center;
+}
+
+/* Align items to left when sidebar is open */
+.sidebar:hover .nav-link,
+.sidebar:hover .sidebar-btn {
+    justify-content: flex-start;
+}
+
+/* Add subtle separation between items */
+.nav-item:not(:last-child) {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Keep icons centered when sidebar is closed */
+.sidebar.closed .nav-link ion-icon,
+.sidebar.closed .sidebar-btn ion-icon {
+    margin-right: 0;  /* Remove margin when closed */
+}
+
+/* Add margin back when sidebar is expanded */
+.sidebar:hover .nav-link ion-icon,
+.sidebar:hover .sidebar-btn ion-icon {
+    margin-right: 15px;
+}
+
+/* Active state styles */
+.nav-link.active,
+.sidebar-btn.active {
+    background-color: #2d2d2d;
+    color: #1ec8ff;
+    border-left: 3px solid #1ec8ff;
+}
+
+.nav-link.active ion-icon,
+.sidebar-btn.active ion-icon {
+    color: #1ec8ff;
+}
+
+/* Adjust padding for active state to account for border */
+.nav-link.active,
+.sidebar-btn.active {
+    padding-left: 17px;  /* 20px - 3px border */
+}
+
+/* Keep the active state visible even when sidebar is closed */
+.sidebar.closed .nav-link.active,
+.sidebar.closed .sidebar-btn.active {
+    background-color: #2d2d2d;
+    border-left: 3px solid #1ec8ff;
+    padding-left: 22px;  /* 25px - 3px border */
+}
