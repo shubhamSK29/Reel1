@@ -51,12 +51,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #222;
+    background: #000;
     border-radius: 20px;
     overflow: hidden;
-    margin-bottom: 10px;
-    border: 5px solid #fff;
-    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
+    margin-bottom: 15px;
+    border: 3px solid rgba(255, 255, 255, 0.15);  /* Subtle off-white border */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 /* Video Styling */
@@ -64,8 +64,8 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 18px;  /* Slightly less than container to account for border */
     background: black;
-    border-radius: 15px;
 }
 
 /* Delete Button */
@@ -116,4 +116,145 @@ body {
 
 .add-button:hover {
     background: #ddd;
+}
+
+.play-control {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.5);  /* Semi-transparent black background */
+    border: none;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);  /* Stronger shadow */
+    cursor: pointer;
+    padding: 8px;  /* Slightly larger padding */
+    font-size: 28px;  /* Larger icon size */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;  /* Circular background */
+    width: 40px;
+    height: 40px;
+}
+
+.fullscreen-button {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+    padding: 8px;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+.volume-control {
+    position: absolute;
+    bottom: 10px;
+    left: 60px;  /* Position it next to play button */
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+    padding: 8px;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+/* Fullscreen styles */
+.reel:-webkit-full-screen {
+    border: 3px solid rgba(255, 255, 255, 0.15);
+    background: black;
+}
+
+.reel:-webkit-full-screen video {
+    width: auto;  /* Let width adjust automatically */
+    height: 100vh;  /* Take full height */
+    max-width: 100vw;  /* Prevent horizontal overflow */
+    object-fit: contain;  /* Maintain aspect ratio without cropping */
+}
+
+/* For Firefox */
+.reel:fullscreen {
+    border: 3px solid rgba(255, 255, 255, 0.15);
+    background: black;
+}
+
+.reel:fullscreen video {
+    width: auto;
+    height: 100vh;
+    max-width: 100vw;
+    object-fit: contain;
+}
+
+/* For other browsers */
+.reel:-ms-fullscreen video,
+.reel:-moz-full-screen video {
+    width: auto;
+    height: 100vh;
+    max-width: 100vw;
+    object-fit: contain;
+}
+
+/* Volume Bar Styles */
+.volume-bar-container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px 20px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    z-index: 1000;
+    pointer-events: none;
+}
+
+.volume-bar-container.visible {
+    opacity: 1;
+}
+
+.volume-icon {
+    color: white;
+    font-size: 20px;
+}
+
+.volume-level {
+    color: white;
+    min-width: 40px;
+}
+
+.volume-bar {
+    width: 100px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.volume-bar-fill {
+    height: 100%;
+    background: white;
+    transition: width 0.1s;
 }
